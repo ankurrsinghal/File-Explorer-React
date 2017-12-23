@@ -1,0 +1,190 @@
+@import "bourbon/bourbon";
+@import "normalize";
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+a{
+  text-decoration: none;
+}
+
+.clearfix{
+  @include clearfix;
+}
+
+.pull-left{
+  float: left;
+}
+
+.pull-right{
+  float: right;
+}
+
+.main-app{
+  padding: 36px;
+}
+
+.btn {
+  background: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Raleway', sans-serif;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 400;
+
+  &.btn-sm {
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+}
+
+.btn-solid{
+  &.btn-black {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+.btn-line{
+  border-width: 2px;
+  border-style: solid;
+
+  &.btn-black {
+    border-color: #000;
+    color: #000;
+
+    &.btn-solid {
+      color: #fff;
+    }
+  }
+}
+
+.top-header{
+  .logo{
+    a{
+      background-color: #000;
+      font-size: 16px;
+      padding: 18px 36px;
+      color: #FFFFFF;
+      display: block;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+
+  .header-actions {
+    @include clearfix;
+    .form-group{
+      float: left;
+      margin: 0 24px;
+    }
+
+
+    .back-to-folder {
+      a {
+        padding: 16px 18px;
+        font-size: 14px;
+        font-weight: 700;
+        border: 2px solid #000;
+        color: #000;
+        background-color: #F2F2F2;
+        display: block;
+      }
+    }
+  }
+}
+
+.form-control{
+  background: none;
+  outline: none;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 16px 18px;
+  font-size: 14px;
+  font-weight: 700;
+  border: 2px solid #000;
+  color: #000;
+  background-color: #F2F2F2;
+}
+
+
+.main-section {
+  margin-top: 80px;
+
+  header{
+    h1, button {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    button{
+      margin-left: 12px;
+      font-weight: 700;
+    }
+  }
+
+  .full-path{
+    font-size: 36px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .objects-board{
+    margin-top: 50px;
+    min-height: 400px;
+    background-color: #F5F5F5;
+
+    .file-date {
+      color: #BABABA;
+      font-size: 36px;
+      text-align: center;
+      padding-top: 4em;
+    }
+
+    .objects-list{
+      margin: 0;
+      padding: 12px;
+      list-style: none;
+      @include clearfix;
+
+      li{
+        float: left;
+        margin: 12px;
+      }
+
+      .object {
+        width: 100px;
+        height: 100px;
+        display: block;
+        background-color: #fff;
+        border: 2px solid #000;
+        color: #000;
+        font-weight: 700;
+        text-align: center;
+        padding: 12px 0 14px;
+
+        img{
+          max-width: 50px;
+          max-height: 50px;
+        }
+        p{
+          font-size: 14px;
+          font-weight: 700;
+          margin: 0;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+}
